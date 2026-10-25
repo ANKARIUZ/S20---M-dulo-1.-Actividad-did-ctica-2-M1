@@ -145,14 +145,24 @@ class Documento:
 
     def codigo(self, texto: str) -> None:
         parrafo = self.doc.add_paragraph()
-        parrafo.paragraph_format.left_indent = Cm(0.6)
+        parrafo.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        parrafo.paragraph_format.left_indent = Cm(0.5)
+        parrafo.paragraph_format.right_indent = Cm(0.3)
         parrafo.paragraph_format.space_before = Pt(6)
         parrafo.paragraph_format.space_after = Pt(8)
         parrafo.paragraph_format.line_spacing = 1.0
-        run = parrafo.add_run(texto)
-        run.font.name = "Consolas"
-        run.font.size = Pt(8.5)
-        run._element.rPr.rFonts.set(qn("w:eastAsia"), "Consolas")
+        parrafo.paragraph_format.keep_together = True
+
+        lineas = texto.split("\n")
+        for indice, linea in enumerate(lineas):
+            run = parrafo.add_run(linea)
+            run.font.name = "Courier New"
+            run.font.size = Pt(8)
+            run._element.rPr.rFonts.set(qn("w:eastAsia"), "Courier New")
+            run._element.rPr.rFonts.set(qn("w:cs"), "Courier New")
+            if indice < len(lineas) - 1:
+                run.add_break()
+
         sombreado = OxmlElement("w:shd")
         sombreado.set(qn("w:fill"), "F2F2F2")
         parrafo._p.get_or_add_pPr().append(sombreado)
@@ -350,6 +360,8 @@ def resumen(d: Documento, datos: dict) -> None:
         "Anexos",
     ):
         d.p(seccion, alineacion="izq")
+        d.doc.paragraphs[-1].paragraph_format.space_after = Pt(2)
+        d.doc.paragraphs[-1].paragraph_format.line_spacing = 1.0
 
 
 def introduccion(d: Documento) -> None:
@@ -740,7 +752,7 @@ def resultados(d: Documento, datos: dict) -> None:
         ["N tiradas", "1", "2", "3", "4", "5", "6", "Desv. máx.", "χ²"],
         filas_uniformidad,
         titulo="Frecuencia relativa de cada cara frente a la probabilidad teórica 1/6 ≈ 0,1667",
-        anchos=[2.0, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 2.2, 1.6],
+        anchos=[2.0, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 2.5, 1.5],
     )
     d.figura(
         "fig02_uniformidad_dados.png",
