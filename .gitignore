@@ -1,0 +1,27 @@
+# Bytecode y cachés de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Sistema operativo
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Registros de ejecución (los resultados sí se versionan)
+resultados/run*.log
+*.tmp
+
+# Documentos temporales de Word
+~$*.docx

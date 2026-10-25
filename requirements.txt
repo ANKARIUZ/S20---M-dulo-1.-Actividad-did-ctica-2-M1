@@ -1,0 +1,8 @@
+# Dependencias del proyecto
+#
+# El núcleo del juego (reglas, estrategias y motor de Montecarlo) solo usa la
+# biblioteca estándar de Python. Pillow se necesita para generar las gráficas
+# del informe y python-docx para regenerar el documento Word.
+
+Pillow>=9.0
+python-docx>=1.1
