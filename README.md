@@ -85,13 +85,7 @@ yahtzee-montecarlo/
 │   ├── ejecutar_experimentos.py # Corre todo y genera CSV + JSON + PNG
 │   └── resumen_resultados.py    # Imprime un resumen legible
 ├── tests/                       # 29 pruebas unitarias (unittest)
-├── docs/
-│   ├── generar_documento.py     # Genera el informe Word desde los resultados
-│   ├── guion_video.md           # Guion del video de 5 minutos
-│   ├── diseno_solucion.md       # Documento de diseño
-│   └── entrega_checklist.md     # Lista de verificación de la entrega
 ├── resultados/                  # CSV, JSON y figuras (generados)
-├── Rios_JuanCamilo_Montecarlo.docx   # Documento técnico
 ├── requirements.txt
 └── README.md
 ```
@@ -251,14 +245,6 @@ reproducibilidad, número de turnos y estadística.
 Todos los resultados son **reproducibles**: con la misma semilla se obtienen exactamente los mismos
 números.
 
----
-
-## 🎬 Documento y video
-
-- 📄 Documento técnico: [`Rios_JuanCamilo_Montecarlo.docx`](Rios_JuanCamilo_Montecarlo.docx)
-- 🎥 Guion del video (5 minutos): [`docs/guion_video.md`](docs/guion_video.md)
-- 🔗 Video: _pendiente de publicar_
-- 🔗 Repositorio: _pendiente de publicar_
 
 ---
 
