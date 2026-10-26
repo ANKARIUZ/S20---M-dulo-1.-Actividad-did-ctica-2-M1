@@ -23,6 +23,9 @@ desktop.ini
 resultados/run*.log
 *.tmp
 
+# Resultados generados al ejecutar los experimentos
+resultados/
+
 # Documentos del informe: se entregan en la plataforma, no se publican aquí
 *.docx
 ~$*.docx

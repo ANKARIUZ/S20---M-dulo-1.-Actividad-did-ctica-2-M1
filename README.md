@@ -60,9 +60,7 @@ Experimento ejecutado con **100.000 partidas por estrategia**, semilla `20262026
 Al multiplicar por 1.000 el tamaño de la muestra, el error se redujo **30,3 veces**, muy cerca del
 factor teórico √1.000 ≈ 31,6.
 
-![Convergencia del puntaje promedio](resultados/fig01_convergencia_media.png)
-
-> Más figuras en la carpeta [`resultados/`](resultados/).
+Las figuras del análisis se generan automáticamente al ejecutar `scripts/ejecutar_experimentos.py`.
 
 ---
 
@@ -84,7 +82,6 @@ yahtzee-montecarlo/
 │   ├── ejecutar_experimentos.py # Corre todo y genera CSV + JSON + PNG
 │   └── resumen_resultados.py    # Imprime un resumen legible
 ├── tests/                       # 29 pruebas unitarias (unittest)
-├── resultados/                  # CSV, JSON y figuras (generados)
 ├── requirements.txt
 └── README.md
 ```
