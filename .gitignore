@@ -23,5 +23,6 @@ desktop.ini
 resultados/run*.log
 *.tmp
 
-# Documentos temporales de Word
+# Documentos del informe: se entregan en la plataforma, no se publican aquí
+*.docx
 ~$*.docx

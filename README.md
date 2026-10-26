@@ -34,7 +34,6 @@ objeto de estudio**.
 | 🔬 **Experimentos incluidos** | Uniformidad de los dados, convergencia, precisión, dos jugadores y puntaje por casilla |
 | 📊 **Gráficas automáticas** | 7 figuras generadas con Pillow, sin depender de matplotlib |
 | 🧪 **29 pruebas unitarias** | Reglas, tabla, turnos, reproducibilidad y estadística |
-| 📄 **Documento automático** | El informe Word se genera a partir de los datos de la última corrida |
 
 ---
 
@@ -96,7 +95,6 @@ yahtzee-montecarlo/
 
 - **Python 3.10 o superior** (probado con 3.12)
 - `Pillow` para generar las gráficas
-- `python-docx` solo si se desea regenerar el informe Word
 
 El **núcleo del juego y del motor de Montecarlo no tiene dependencias externas**: funciona con la
 biblioteca estándar de Python.
@@ -195,7 +193,6 @@ que esta fase se apoyó en el reglamento y en el tablero de referencia.
 - Experimento de dos jugadores simétrico.
 - Generador de gráficas sin dependencias externas (Pillow).
 - Exportación a CSV y JSON para auditar los resultados.
-- Generación automática del documento técnico.
 - 29 pruebas unitarias.
 
 ---
