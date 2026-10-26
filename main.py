@@ -2,7 +2,7 @@
 
 Uso
 ---
-Menú interactivo (lo más cómodo para la demostración en el video)::
+Menú interactivo (lo más cómodo para explorar el programa)::
 
     python main.py
 
